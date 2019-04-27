@@ -123,8 +123,8 @@ on(event: 'abort', listener: (reason: MjpegDecoder.AbortReason, error?: Error) =
 
 Add listener for abort event which is emitted for some reason. The decoder will stop
 consuming the video stream in the following cases:
-- `http_error`: when an network error or http error occured
+- `timeout`: network timeout while connecting to the video stream source at the given url.
+- `http_error`: when a network error or http error occured
 - `invalid_mjpeg_stream`: if the source is not a valid M-JPEG video stream
 - `end`: when you call the `stop` method of the decoder or the max frames have been delivered.
-- `max_buffer_size_exceeded`: when the internal data buffer size reached the limit, and this might be caused by the M-JPEG decoding problem. If you accountered this error, please create a issue.
-- `timeout`: network timeout while connecting to the video stream source at the given url.
+- `max_buffer_size_exceeded`: when the internal data buffer size reached the limit, and this might be caused by the M-JPEG decoding problem. If you accountered this error, please create an issue.
