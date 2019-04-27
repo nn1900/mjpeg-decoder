@@ -1,0 +1,11 @@
+{
+  "name": "mjpeg-decoder",
+  "version": "1.0.0",
+  "description": "A NodeJS M-JPEG decoder which can be used to retrieve individual JPEG frames or take a snapshot from a IP/network camera which serves M-JPEG video stream.",
+  "main": "lib/mjpeg-decoder.js",
+  "repository": "git@github.com:nn1900/mjpeg-decoder.git",
+  "author": "eric <eric.blueplus@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "types": "./lib/mjpeg-decoder.d.ts"
+}
