@@ -67,7 +67,7 @@ constructor(url: string, options?: Partial<MjpegDecoder.MjpegDecoderOptions>)
 - `options`: control how the decoder will work as expected.
 
 > How to find the url of the camera?
-> The camera user manual should usually mention the URL, or searching the camera model number should get you a result as well.  You can also try this tool http://skjm.com/icam/mjpeg.php.
+> The camera user manual should usually mention the URL, or searching the camera model number should get you a result as well. You can also try this tool http://skjm.com/icam/mjpeg.php or this tool https://www.ispyconnect.com/man.aspx.
 
 ### decoderForSnapshot
 ```typescript
@@ -128,3 +128,21 @@ consuming the video stream in the following cases:
 - `invalid_mjpeg_stream`: if the source is not a valid M-JPEG video stream
 - `end`: when you call the `stop` method of the decoder or the max frames have been delivered.
 - `max_buffer_size_exceeded`: when the internal data buffer size reached the limit, and this might be caused by the M-JPEG decoding problem. If you accountered this error, please create an issue.
+
+### Capture M-JPEG snapshot the other ways
+Use wget:
+```bash
+$ wget <url> -O snapshot.jpg
+```
+
+Use ffmpeg:
+```bash
+ffmpeg -f MJPEG -y -i <url> -r 1 -vframes 1 -q:v 1 snapshot.jpg
+```
+
+## References
+- https://aeroquartet.com/movierepair/jpeg.en.html
+- https://www.media.mit.edu/pia/Research/deepview/exif.html
+- https://github.com/jacksonliam/mjpg-streamer/
+- https://channel9.msdn.com/coding4fun/articles/MJPEG-Decoder
+- https://medium.com/@petehouston/capture-mjpg-streamer-snapshot-9d0e253b9bbd
