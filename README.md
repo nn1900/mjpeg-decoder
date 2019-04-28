@@ -54,9 +54,9 @@ fs.writeFileSync('snapshot.jpg', frame);
 
 ### Options
 `MjpegDecoder.MjpegDecoderOptions`
-- `interval`: Specify the time interval in which the frames will be delivered.
-- `maxFrames`: Specify the max frames to consume before stopping.
-- `timeout`: Specify the timeout before the http connection is aborted
+- `interval`: Specify the time interval in which the frames will be delivered (_default: `0`_)
+- `maxFrames`: Specify the max frames to consume before stopping (_default: `0`_)
+- `timeout`: Specify the timeout before the http connection is aborted (_default: `10000`ms_)
 
 ### Constructor
 ```typescript
