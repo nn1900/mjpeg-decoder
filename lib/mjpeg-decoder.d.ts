@@ -18,7 +18,7 @@ declare namespace MjpegDecoder {
     timeout: number;
   }
 
-  declare type AbortReason = 'invalid_mjpeg_stream' | 'http_error' | 'stop' | 'max_buffer_size_exceeded' | 'end' | 'timeout';
+  type AbortReason = 'invalid_mjpeg_stream' | 'http_error' | 'stop' | 'max_buffer_size_exceeded' | 'end' | 'timeout';
 }
 
 declare class MjpegDecoder extends EventEmitter {

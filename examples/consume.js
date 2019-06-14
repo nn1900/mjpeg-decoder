@@ -1,7 +1,7 @@
 const fs = require('fs');
 const MjpegDecoder = require('../lib/mjpeg-decoder');
 
-const url = 'http://166.239.108.20:82/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER';
+const url = 'http://127.0.0.1:8000/?action=stream';
 
 try {
   fs.mkdirSync('results');
